@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【限定50名】月額1万円YouTuber・インフルエンサー法律顧問サポート</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #f1f3f4;
+            --text-color: #3c4043;
+            --heading-font: 'M PLUS Rounded 1c', sans-serif;
+            --body-font: 'M PLUS Rounded 1c', sans-serif;
+        }
+        body {
+            font-family: var(--body-font);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: #ffffff;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: #ffffff;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--secondary-color);
+            text-align: center;
+        }
+        header h1 {
+            font-family: var(--heading-font);
+            font-size: 2em;
+            color: var(--primary-color);
+            margin: 0;
+        }
+        .hero {
+            background: var(--primary-color);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h2 {
+            font-family: var(--heading-font);
+            font-size: 2.8em;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: var(--primary-color);
+            padding: 15px 35px;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+        .cta-button:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        section {
+            padding: 60px 0;
+        }
+        section:nth-child(even) {
+            background-color: var(--secondary-color);
+        }
+        h3 {
+            font-family: var(--heading-font);
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+        }
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .problem-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .problem-item p {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .feature-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .feature-item h4 {
+            font-family: var(--heading-font);
+            font-size: 1.4em;
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            align-items: stretch;
+        }
+        .pricing-plan {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .pricing-plan h4 {
+            font-family: var(--heading-font);
+            font-size: 1.6em;
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        .price {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .price span {
+            font-size: 0.5em;
+            font-weight: normal;
+        }
+        .pricing-plan ul {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+            flex-grow: 1;
+        }
+        .pricing-plan li {
+            margin-bottom: 15px;
+        }
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+        .testimonial p {
+            font-style: italic;
+            margin: 0 0 10px;
+        }
+        .testimonial footer {
+            text-align: right;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h4 {
+            font-family: var(--heading-font);
+            margin: 0 0 10px;
+            color: var(--primary-color);
+        }
+        .contact {
+            text-align: center;
+        }
+        .contact .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: 2px solid var(--primary-color);
+        }
+        .contact .cta-button:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        footer {
+            background: var(--text-color);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>【限定50名】月額1万円YouTuber・インフルエンサー法律顧問サポート</h1>
+        </div>
+    </header>
+
+    <div style="text-align: center; padding: 40px 20px 0;">
+        <img src="写真 2025-05-24 13 29 06.png" alt="インフルエンサーをサポートするイメージ" style="width: 100%; max-width: 200px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+    </div>
+
+    <main>
+        <section class="hero">
+            <h2>あなたの活動を守る、炎上時代の必須ツール</h2>
+            <p>SNSでの発信、企業とのタイアップ、ファンとの交流。インフルエンサーの活動には、予期せぬ法的リスクが潜んでいます。専門家チームが、あなたの活動を24時間365日サポートします。</p>
+            <a href="#contact" class="cta-button">まずは無料相談から</a>
+        </section>
+
+        <section id="problems">
+            <div class="container">
+                <h3>こんなお悩み、ありませんか？</h3>
+                <div class="problem-grid">
+                    <div class="problem-item">
+                        <p>「このPR投稿、景品表示法や薬機法に違反してないかな…？」</p>
+                    </div>
+                    <div class="problem-item">
+                        <p>「アンチコメントがエスカレート。法的措置を考えたい…」</p>
+                    </div>
+                    <div class="problem-item">
+                        <p>「事務所や企業との契約書、このままサインして大丈夫？」</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h3>サービス内容</h3>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h4>契約書の作成・レビュー</h4>
+                        <p>不利な契約を結んでしまうリスクを回避。企業とのタイアップ、事務所契約などを専門家がチェックします。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>投稿内容の法的チェック</h4>
+                        <p>景品表示法、薬機法、著作権など。炎上リスクのある投稿を未然に防ぎ、安心して発信できる環境を整えます。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>誹謗中傷・権利侵害対応</h4>
+                        <p>悪質なアンチコメントや切り抜き動画など、権利侵害に対する発信者情報開示請求や削除請求をサポートします。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>いつでもチャットで相談</h4>
+                        <p>LINEやSlackで、気になったことをいつでも気軽に弁護士に相談可能。スピーディに疑問を解消します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing">
+            <div class="container">
+                <h3>料金プラン</h3>
+                <div class="pricing-grid">
+                    <div class="pricing-plan">
+                        <h4>スタンダードプラン</h4>
+                        <div class="price">月額 10,000<span>円(税別)</span></div>
+                        <p>活動の守りを固めたい方向け</p>
+                        <ul>
+                            <li>チャットでの法律相談（無制限）</li>
+                            <li>契約書レビュー（月2通まで）</li>
+                            <li>投稿内容の法的チェック</li>
+                            <li>オンライン面談（年4回）</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">このプランで相談</a>
+                    </div>
+                    <div class="pricing-plan">
+                        <h4>プレミアムプラン</h4>
+                        <div class="price">月額 30,000<span>円(税別)</span></div>
+                        <p>包括的なサポートが必要な方向け</p>
+                        <ul>
+                            <li>チャットでの法律相談（無制限）</li>
+                            <li>契約書レビュー・作成（無制限）</li>
+                            <li>投稿内容の法的チェック</li>
+                            <li>誹謗中傷などへの法的措置サポート</li>
+                            <li>オンライン面談（無制限）</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">このプランで相談</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <h3>お客様の声</h3>
+                <div class="testimonial">
+                    <p>"PR案件で企業から提示された契約書に不安を感じて相談しました。自分に不利な条項を修正してもらえて、安心して契約できました。もっと早く相談すればよかったです！"</p>
+                    <footer>- A様 (チャンネル登録者数30万人)</footer>
+                </div>
+                <div class="testimonial">
+                    <p>"些細なことでもチャットで気軽に質問できるのが心強いです。炎上を未然に防ぐためのアドバイスが的確で、活動の自信に繋がっています。"</p>
+                    <footer>- B様 (ファッション系インスタグラマー)</footer>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <h3>よくある質問</h3>
+                <div class="faq-item">
+                    <h4>Q. 地方在住でも契約できますか？</h4>
+                    <p>A. はい、もちろんです。ご相談はすべてオンラインで完結するため、日本全国どこにお住まいの方でもご契約いただけます。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. 炎上してしまった後からでも相談は可能ですか？</h4>
+                    <p>A. はい、可能です。事後対応についても最適な解決策をご提案します。ただし、トラブルを未然に防ぐことが最も重要ですので、お早めのご相談をおすすめします。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. 契約期間に縛りはありますか？</h4>
+                    <p>A. 契約は1ヶ月単位での更新となります。いつでもご自身の活動状況に合わせてプランの変更や解約が可能ですので、ご安心ください。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h3>さあ、法務の力で、もっと自由に。</h3>
+                <p>ご相談・お見積もりは無料です。まずはお気軽にお問い合わせください。</p>
+                <a href="mailto:soudan@example.com?subject=法律顧問サービス無料相談の件" class="cta-button">無料相談を申し込む</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>運営会社: Gemini法律事務所</p>
+            <p>&copy; 2024 Gemini Law Office. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
