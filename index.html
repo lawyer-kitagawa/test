@@ -6,13 +6,15 @@
     <title>【限定50名】月額1万円YouTuber・インフルエンサー法律顧問サポート</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #FF8C00;
-            --secondary-color: #fff5e6;
-            --text-color: #3c4043;
+            --neon-pink: #ff00ff;
+            --neon-cyan: #00ffff;
+            --neon-green: #39ff14;
+            --background-color: #000000;
+            --text-color: #ffffff;
             --heading-font: 'M PLUS Rounded 1c', sans-serif;
             --body-font: 'M PLUS Rounded 1c', sans-serif;
         }
@@ -21,9 +23,9 @@
             margin: 0;
             padding: 0;
             color: var(--text-color);
-            background-color: #ffffff;
+            background-color: var(--background-color);
             line-height: 1.8;
-            overflow-x: hidden; /* AOSによる横スクロールバーの発生を防ぐ */
+            overflow-x: hidden;
         }
         .container {
             max-width: 960px;
@@ -31,28 +33,32 @@
             padding: 0 20px;
         }
         header {
-            background: #ffffff;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--secondary-color);
+            background: transparent;
+            padding: 40px 0;
             text-align: center;
         }
         header h1 {
             font-family: var(--heading-font);
-            font-size: 2em;
-            color: var(--primary-color);
+            font-size: 2.2em;
+            font-weight: 800;
+            color: var(--neon-pink);
             margin: 0;
+            text-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink), 0 0 40px #000;
         }
         .hero {
-            background: var(--primary-color);
+            background: transparent;
             color: white;
             padding: 80px 20px;
             text-align: center;
         }
         .hero h2 {
             font-family: var(--heading-font);
-            font-size: 2.8em;
+            font-size: 3em;
+            font-weight: 800;
+            color: var(--neon-cyan);
             margin-top: 0;
             margin-bottom: 20px;
+            text-shadow: 0 0 5px var(--neon-cyan), 0 0 10px var(--neon-cyan), 0 0 20px #000;
         }
         .hero p {
             font-size: 1.2em;
@@ -61,48 +67,52 @@
         }
         .cta-button {
             display: inline-block;
-            background-color: #ffffff;
-            color: var(--primary-color);
+            background-color: transparent;
+            color: var(--neon-green);
             padding: 15px 35px;
-            font-size: 1.1em;
+            font-size: 1.2em;
             font-weight: bold;
             text-decoration: none;
             border-radius: 50px;
             transition: all 0.3s ease;
-            border: 2px solid white;
+            border: 3px solid var(--neon-green);
+            box-shadow: 0 0 10px var(--neon-green), inset 0 0 10px var(--neon-green);
         }
         .cta-button:hover {
-            background-color: var(--primary-color);
-            color: white;
+            background-color: var(--neon-green);
+            color: var(--background-color);
+            box-shadow: 0 0 20px var(--neon-green), inset 0 0 20px var(--neon-green);
         }
         section {
-            padding: 60px 0;
-        }
-        section:nth-child(even) {
-            background-color: var(--secondary-color);
+            padding: 80px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
         h3 {
             font-family: var(--heading-font);
-            font-size: 2.2em;
+            font-size: 2.5em;
+            font-weight: 800;
             text-align: center;
-            margin-bottom: 50px;
-            color: var(--primary-color);
+            margin-bottom: 60px;
+            color: var(--neon-pink);
+            text-shadow: 0 0 5px var(--neon-pink), 0 0 10px #000;
         }
         .problem-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            gap: 40px;
             text-align: center;
         }
         .problem-item {
-            background: white;
+            background: rgba(255,255,255,0.05);
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-radius: 15px;
+            border: 2px solid var(--neon-cyan);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
         }
         .problem-item p {
             font-size: 1.1em;
             font-weight: bold;
+            color: var(--neon-cyan);
         }
         .features-grid {
             display: grid;
@@ -110,43 +120,58 @@
             gap: 30px;
         }
         .feature-item {
-            background: white;
+            background: rgba(255,255,255,0.05);
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-radius: 15px;
             text-align: center;
+            border: 2px solid var(--neon-green);
         }
         .feature-item h4 {
             font-family: var(--heading-font);
-            font-size: 1.4em;
-            color: var(--primary-color);
+            font-size: 1.6em;
+            color: var(--neon-green);
             margin-top: 0;
+            text-shadow: 0 0 5px var(--neon-green);
         }
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
             align-items: stretch;
         }
         .pricing-plan {
-            background: white;
+            background: transparent;
             padding: 40px 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-radius: 20px;
             text-align: center;
             display: flex;
             flex-direction: column;
+            border: 3px solid;
+            transition: all 0.3s ease;
+        }
+        .pricing-plan:nth-child(1) {
+            border-color: var(--neon-pink);
+        }
+        .pricing-plan:nth-child(2) {
+            border-color: var(--neon-cyan);
+        }
+        .pricing-plan:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
         }
         .pricing-plan h4 {
             font-family: var(--heading-font);
-            font-size: 1.6em;
-            color: var(--primary-color);
+            font-size: 1.8em;
+            font-weight: 800;
             margin-top: 0;
         }
+        .pricing-plan:nth-child(1) h4 { color: var(--neon-pink); }
+        .pricing-plan:nth-child(2) h4 { color: var(--neon-cyan); }
         .price {
-            font-size: 2.5em;
+            font-size: 2.8em;
             font-weight: bold;
             margin: 10px 0;
+            color: var(--text-color);
         }
         .price span {
             font-size: 0.5em;
@@ -162,11 +187,11 @@
             margin-bottom: 15px;
         }
         .testimonial {
-            background: white;
+            background: rgba(255,255,255,0.05);
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             margin-bottom: 20px;
+            border-left: 5px solid var(--neon-pink);
         }
         .testimonial p {
             font-style: italic;
@@ -175,34 +200,28 @@
         .testimonial footer {
             text-align: right;
             font-weight: bold;
-            color: var(--primary-color);
+            color: var(--neon-pink);
         }
         .faq-item {
             margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 20px;
         }
         .faq-item h4 {
             font-family: var(--heading-font);
             margin: 0 0 10px;
-            color: var(--primary-color);
+            color: var(--neon-cyan);
         }
         .contact {
             text-align: center;
         }
-        .contact .cta-button {
-            background-color: var(--primary-color);
-            color: white;
-            border: 2px solid var(--primary-color);
-        }
-        .contact .cta-button:hover {
-            background-color: white;
-            color: var(--primary-color);
-        }
         footer {
-            background: var(--text-color);
-            color: white;
+            background: #111;
+            color: #888;
             text-align: center;
             padding: 30px 0;
             margin-top: 60px;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
     </style>
 </head>
@@ -211,7 +230,7 @@
     <header>
         <div class="container">
             <div style="text-align: center; padding-bottom: 20px;" data-aos="fade-down">
-                <img src="写真 2025-05-24 13 29 06.png" alt="インフルエンサーをサポートするイメージ" style="width: 100%; max-width: 100px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); border: 4px solid var(--primary-color);">
+                <img src="写真 2025-05-24 13 29 06.png" alt="インフルエンサーをサポートするイメージ" style="width: 100%; max-width: 120px; border-radius: 50%; box-shadow: 0 0 15px var(--neon-pink), 0 0 25px var(--neon-pink); border: 4px solid var(--neon-pink);">
             </div>
             <h1 data-aos="fade-up">【限定50名】月額1万円YouTuber・インフルエンサー法律顧問サポート</h1>
         </div>
@@ -219,7 +238,7 @@
 
     <main>
         <section class="hero">
-            <h2 data-aos="fade-right">あなたの活動を守る、炎上時代の必須ツール</h2>
+            <h2 data-aos="fade-right">あなたの活動を守る、<br>炎上時代の必須ツール</h2>
             <p data-aos="fade-left">SNSでの発信、企業とのタイアップ、ファンとの交流。インフルエンサーの活動には、予期せぬ法的リスクが潜んでいます。専門家チームが、あなたの活動を24時間365日サポートします。</p>
             <a href="#contact" class="cta-button" data-aos="fade-up">まずは無料相談から</a>
         </section>
@@ -279,7 +298,7 @@
                             <li>投稿内容の法的チェック</li>
                             <li>オンライン面談（年4回）</li>
                         </ul>
-                        <a href="#contact" class="cta-button">このプランで相談</a>
+                        <a href="#contact" class="cta-button" style="--neon-green: var(--neon-pink);">このプランで相談</a>
                     </div>
                     <div class="pricing-plan" data-aos="flip-left" data-aos-delay="200">
                         <h4>プレミアムプラン</h4>
@@ -292,7 +311,7 @@
                             <li>誹謗中傷などへの法的措置サポート</li>
                             <li>オンライン面談（無制限）</li>
                         </ul>
-                        <a href="#contact" class="cta-button">このプランで相談</a>
+                        <a href="#contact" class="cta-button" style="--neon-green: var(--neon-cyan);">このプランで相談</a>
                     </div>
                 </div>
             </div>
